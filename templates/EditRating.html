@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% for book in books %}
+{% if book['rating'] == rating: %}
+        <h2>Book Name: {{book['title']}} </h2>
+        <h2>Current Rating {{book['rating']}} </h2>
+         <form action="" method="POST">
+         <input type="number" name="newrating">
+             <button type="submit">Change rating</button>
+            </form>
+{% endif %}
+{% endfor %}
+</body>
+</html>
